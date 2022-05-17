@@ -1,0 +1,268 @@
+@charset "utf-8";
+/****** 头部样式 ******/
+
+.navList a {
+  display: block;
+  padding: 0 19px;
+  height: 49px;
+  line-height: 49px;
+  font-size: 20px;
+  color: white;
+}
+.navList a:hover {
+  background-color: #256ddf;
+}
+.navList .now {
+  background-color: #256ddf;
+}
+
+/****** 首页样式 ******/
+.carousel {
+  position: relative;
+  margin: 0 auto;
+  padding: 30px 0;
+  width: 1170px;
+  height: 500px;
+  border-bottom: 1px solid #f8f8f8;
+}
+.carContent {
+  position: absolute;
+  width: 750px;
+  height: 480px;
+  /*超出部分隐藏*/
+  overflow: hidden;
+}
+/*设置背景图⽚的布局*/
+.content {
+  position: absolute;
+  width: 3000px;
+  left: 0;
+  z-index: 1;
+}
+
+.content ul li {
+  float: left;
+}
+.content li img {
+  width: 750px;
+  height: 480px;
+}
+/* 圆点按钮 */
+.banner_slider_dots {
+  position: absolute;
+  z-index: 2;
+  width: 100%;
+  left: 50%;
+  margin-left: -50%;
+  bottom: 5px;
+  text-align: center;
+}
+.dots_item {
+  display: inline-block;
+  margin: 4px;
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background: white;
+  cursor: pointer;
+}
+.dots_active {
+  background: rgba(255, 255, 255, 0.6) !important;
+}
+
+.rightContent {
+  position: absolute;
+  right: 0;
+  z-index: 3;
+  width: 390px;
+}
+.news {
+  font-size: 24px;
+  color: #5580f7;
+  border-bottom: 1px solid #5580f7;
+}
+.ranking {
+  color: #a6a9ac;
+  font-size: 12px;
+  margin-left: 5px;
+}
+.newH3 {
+  height: 2px;
+  border-bottom: 1px dashed #a6a9ac;
+}
+
+.details h2 {
+  color: #5580f7;
+  font-size: 16px;
+  font-weight: 400;
+  cursor: pointer;
+}
+.details .active {
+  color: #000219;
+}
+.details .active:hover {
+  color: #5580f7;
+}
+.details .hot {
+  margin-right: 8px;
+  font-size: 12px;
+}
+.details {
+  margin-top: 10px;
+  height: 410px;
+  overflow: hidden;
+}
+.details li {
+  padding: 9px 0;
+  line-height: 22px;
+}
+.detailList {
+  display: flex;
+  display: none;
+  margin-top: 4px;
+  padding: 5px;
+  border: 1px dashed #a6a9ac;
+}
+.detailListShow .detailList {
+  display: flex;
+}
+
+.detailListShow .active {
+  color: #5580f7;
+}
+.detailsRight {
+  margin: 20px 9px;
+}
+.detailsize {
+  margin-left: 5px;
+  color: #5580f7;
+}
+.collection {
+  margin: 0 auto;
+  padding: 30px 0;
+  width: 1170px;
+  border-bottom: 1px solid #f8f8f8;
+}
+.collectionTop {
+  text-align: center;
+}
+.collectionTop h2 {
+  margin: 0 auto;
+  width: 180px;
+  font-size: 24px;
+  color: #5580f7;
+  border-bottom: 1px solid #5580f7;
+}
+.collectionTop h3 {
+  margin: 0 auto;
+  width: 180px;
+  color: #a6a9ac;
+  font-size: 12px;
+  border-top: 1px dashed #a6a9ac;
+}
+.collectionNav {
+  width: 100%;
+  margin-top: 15px;
+  text-align: center;
+}
+.collectionNav span {
+  padding: 0 14px;
+  border-right: 1px solid #000219;
+  cursor: pointer;
+  font-size: PingFang SC-Bold;
+}
+.collectionNav .active {
+  border-right: 1px solid #5580f7;
+  color: #5580f7;
+}
+.collectionNav span:hover {
+  color: #5580f7;
+}
+.collectionList {
+  margin-top: 15px;
+  border-top: 1px solid #5580f7;
+}
+.collectionListTop {
+  display: none;
+  margin-top: 2px;
+  padding: 20px 0;
+  border-top: 1px solid #cbd9fd;
+}
+.collectShow {
+  display: block;
+}
+.collectionListTop img {
+  border-radius: 10px;
+  border: 1px dashed #a6a9ac;
+}
+.collectImg {
+  display: inline-block;
+  position: relative;
+  padding: 10px 0;
+  margin-right: 20px;
+}
+.collectTop {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  height: 56px;
+  line-height: 56px;
+  background-color: rgba(255, 255, 255, 0.6);
+  text-align: center;
+  color: #fff;
+}
+.gossip {
+  margin: 0 auto;
+  padding: 30px 0;
+  width: 1170px;
+}
+
+.gossipB0ttom {
+  display: flex;
+  margin-top: 2px;
+  padding: 20px 0;
+  border-top: 1px dashed #cbd9fd;
+}
+.gossipBr {
+  border-bottom: 1px solid #5580f7;
+}
+.gossipBorder {
+  display: inline-block;
+  position: relative;
+  border: 1px dashed #a6a9ac;
+  /* margin-right: 10px; */
+}
+.gossipDetail {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  height: 56px;
+  line-height: 56px;
+  background-color: rgba(255, 255, 255, 0.6);
+  text-align: center;
+  color: #fff;
+  border-top: 1px dashed #a6a9ac;
+}
+.gossiAll {
+  width: 377px;
+  margin-right: 20px;
+}
+.gossipUl li {
+  padding: 8px 0;
+  line-height: 20px;
+  width: 100%;
+}
+.gossipUl span {
+  display: inline-block;
+  width: 6px;
+  height: 6px;
+  margin-right: 15px;
+  background-color: #a6a9ac;
+  border-radius: 3px;
+}
+
+.swiper {
+  --swiper-theme-color: #5580f7; /* 设置Swiper风格 */
+  --swiper-navigation-color: #fffe; /* 单独设置按钮颜色 */
+  --swiper-navigation-size: 28px; /* 设置按钮大小 */
+}
