@@ -1,107 +1,37 @@
-// window.onload = function() {
-//   var carContent = $(".carContent"),
-//     pics = $(".content"),
-//     items = $(".content li"),
-//     pic_width = items.eq(0).width(),
-//     dots = $(".banner_slider_dots a"),
-//     current = 0,
-//     timmer = null,
-//     size = dots.size();
-//   // 定义一个鼠标滑过判断事件
-//   carContent.hover(
-//     function() {
-//       clearInterval(timmer);
-//     },
-//     function() {
-//       timmer = setInterval(slider, 3000);
-//     }
-//   );
-//   function slider() {
-//     current++;
-//     doSlider();
-//   }
-//   function doSlider() {
-//     // 圆点按钮轮播
-//     dots
-//       .removeClass("dots_active")
-//       .eq(current % size)
-//       .addClass("dots_active");
-//     // 图片轮播
-//     pics.stop().animate(
-//       {
-//         left: -current * pic_width
-//       },
-//       1000,
-//       function() {
-//         if (current >= size) {
-//           current = 0;
-//           pics.css("left", -current * pic_width + "px");
-//         } else if (current < 0) {
-//           current = size - 1;
-//           pics.css("left", -size * pic_width + "px");
-//         }
-//       }
-//     );
-//   }
-//   timmer = setInterval(slider, 3000);
-
-//   // 点击圆点切换图片
-//   dots.click(function() {
-//     current = $(this).index();
-//     doSlider();
-//   });
-// };
-
-$(document).ready(function() {
-  //为了样式
+$(document).ready(function () {
+  //为了首页样式
   $(".collectionNav span")
     .eq(3)
     .css("border", "none");
   $(".gossiAll")
     .eq(2)
     .css("margin-right", "0");
-  $(".collectImg")
-    .eq(3)
-    .css("margin-right", "0");
-  $(".collectImg")
-    .eq(7)
-    .css("margin-right", "0");
-  var detailLi = $(".detailListShow");
-  //判断字符串长度
-  function detailLength(a) {
-    var detail = $(".detailsRight span");
-    var index = a.index();
-    console.log(index);
-    var value = detail.eq(index).text();
-    console.log(detail.eq(index));
-    var len = value.length;
-    if (len > 72) {
-      varlenMore = value.substring(0, 72);
-      detail.eq(index).html(varlenMore + "...");
-    } else {
-      detail.eq(index).html(value);
-    }
+  
+  //首页默认展示第一条热门新闻
+  $(".collectionListTop").eq(0).addClass("collectShow");
+
+  //网红默认点击第一个标签
+  $(".encyStyleRight span").eq(0).addClass("styleActive");
+  $(".encyCategoryRight span").eq(0).addClass("categoryActive");
+
+
+  //首页最新收录list判断能否被4整除
+  function sum(x,y) {
+    var  a = x.find(".collectImg")
+    $.each(a, function(index, value) {
+      var z = (index + 1) % y;
+      if(z == 0){ //余数为0就代表能被整除  
+        a.eq(index).css("margin-right", "0"); 
+      }
+    })
+    
   }
-  detailLength(detailLi);
-  //热门新闻hover事件
-  $(".details li").hover(
-    function() {
-      var a = $(this);
-      detailLength(a);
-      $(this).addClass("detailListShow");
-      $(this)
-        .siblings()
-        .removeClass("detailListShow");
-    },
-    function() {
-      value = "";
-      $(this).removeClass("detailListShow");
-    }
-  );
-  //截取新闻详细页面的长度
+  //默认展示第一个抖音去除右侧right
+  sum($(".collectShow"), 4);
+  
 
   //抖音、快手、虎牙、斗鱼的点击切换事件
-  $(".collectionNav span").click(function() {
+  $(".collectionNav span").hover(function () {
     var Index = $(".collectionNav span").index(this);
     $(this).addClass("active");
     $(this)
@@ -114,10 +44,40 @@ $(document).ready(function() {
       .eq(Index)
       .siblings()
       .removeClass("collectShow");
+      sum($(".collectShow"),4);
   });
+
+  // 网红百科标签选择
+  function page() {
+    $(".pageNum span").siblings().removeClass("pageNumActive");
+    $(".pageFirst").siblings().removeClass("pageActive");
+    $(".pageNum span").eq(0).addClass("pageNumActive");
+    $(".pageFirst").addClass("pageActive");
+    $(".pageNext").removeClass("pageNo");
+  }
+  //多选
+  $(".encyStyleRight span").click(function () { 
+    //默认分页
+    page();
+    if ($(this).hasClass("styleActive")) {
+      $(this).removeClass("styleActive");
+    } else {
+      $(this).addClass("styleActive");
+    }
+  })
+  //单选
+  $(".encyCategoryRight span").click(function () {
+    //默认分页
+    page();
+    $(this).addClass("categoryActive");
+    $(this).siblings().removeClass("categoryActive");
+  })
 });
 
-$(document).ready(function() {
+
+//首页轮播图插件
+$(document).ready(function () {
+  console.log(window.location.pathname)
   var swiper = new Swiper(".swiper", {
     autoplay: true, // 可选选项，自动滑动
     loop: true, // 无限轮播

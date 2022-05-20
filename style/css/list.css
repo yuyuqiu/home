@@ -1,0 +1,22 @@
+@charset "utf-8";
+/****** 新闻列表样式 ******/
+.dataList{
+  display: flex;
+  width: 784px;
+  margin-top: 20px;
+}
+.listDetails{
+  margin:0 0 10px 10px;
+}
+.dataList img {
+  margin-bottom: 0;
+}
+
+.listSection{
+  padding: 8px 0;
+  font-size: 14px;
+  color: #A6A9AC;
+}
+.listSection img{
+  border: none;
+}

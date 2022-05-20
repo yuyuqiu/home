@@ -101,6 +101,5 @@ dd {
 }
 
 .clearfix {
-  /* 触发 hasLayout */
   zoom: 1;
 }

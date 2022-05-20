@@ -1,0 +1,75 @@
+@charset "utf-8";
+/* 网红百科 */
+.encyclopedias{
+  position: relative;
+  width: 1170px;
+  margin: 0 auto;
+}
+.circular {
+  display: inline-block;
+  width: 6px;
+  height: 6px;
+  margin: 0 8px 2px 0;
+  background-color: #a6a9ac;
+  border-radius: 3px;
+}
+.encyStyle{
+  display: flex;
+  padding: 40px 0;
+  border-bottom:1px solid #f8f8f8;
+}
+.encyStyleLeft,.encyCategoryLeft{
+  padding: 4px;
+  color: #a6a9ac;
+}
+.encyStyleRight span{
+  display: inline-block;
+  padding: 4px 12px;
+  margin-left: 16px;
+  color: #000;
+  border-radius: 6px;
+  background: #CBD9FD;
+  cursor: pointer;
+  border: 1px solid #fff;
+}
+.encyStyleRight  .styleActive{
+  border: 1px dashed #5580f7;
+}
+.encyStyleRight span:hover{
+  border: 1px dashed #5580f7;
+}
+.encyCategory{
+  position: relative;
+  border-bottom:1px solid #f8f8f8;
+  padding: 16px 0 40px 0;
+  height: 60px;
+}
+.encyCategoryRight {
+  position: absolute;
+  top: 18px;
+  left: 73px;
+}
+.encyCategoryRight span{
+  display: inline-block;
+  padding: 4px 12px;
+  margin-left: 16px;
+  color: #000;
+  cursor: pointer;
+}
+.encyCategoryRight .categoryActive{
+  color: #5580f7;
+}
+.encyCategoryRight span:hover{
+  color: #5580f7;
+}
+.encyBottom{
+  padding: 40px 0;
+}
+.encyBottom img{
+  border: 1px dashed #a6a9ac;
+}
+.encyBottom .collectImg{
+  margin-right:16px;
+}
+
+

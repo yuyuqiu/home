@@ -1,20 +1,5 @@
 @charset "utf-8";
-/****** 头部样式 ******/
 
-.navList a {
-  display: block;
-  padding: 0 19px;
-  height: 49px;
-  line-height: 49px;
-  font-size: 20px;
-  color: white;
-}
-.navList a:hover {
-  background-color: #256ddf;
-}
-.navList .now {
-  background-color: #256ddf;
-}
 
 /****** 首页样式 ******/
 .carousel {
@@ -57,15 +42,7 @@
   bottom: 5px;
   text-align: center;
 }
-.dots_item {
-  display: inline-block;
-  margin: 4px;
-  width: 6px;
-  height: 6px;
-  border-radius: 50%;
-  background: white;
-  cursor: pointer;
-}
+
 .dots_active {
   background: rgba(255, 255, 255, 0.6) !important;
 }
@@ -91,28 +68,43 @@
   border-bottom: 1px dashed #a6a9ac;
 }
 
-.details h2 {
+.details h2,
+.newsHot h2,
+.newsRecommend h2{
   color: #5580f7;
   font-size: 16px;
   font-weight: 400;
   cursor: pointer;
 }
-.details .active {
+.details .active,
+.newsHot .active,
+.newsRecommend .active{
   color: #000219;
 }
-.details .active:hover {
+.details .active:hover,
+.newsHot .active:hover,
+.newsRecommend .active:hover {
   color: #5580f7;
 }
-.details .hot {
+.details .hot,
+.newsHot .hot,
+.newsRecommend .hot{
   margin-right: 8px;
   font-size: 12px;
 }
-.details {
+.details,
+.newsHot,
+.newsRecommend {
   margin-top: 10px;
-  height: 410px;
+  height: 430px;
   overflow: hidden;
 }
-.details li {
+.newsRecommend {
+  height: 500px;
+}
+.details li,
+.newsHot li,
+.newsRecommend li {
   padding: 9px 0;
   line-height: 22px;
 }
