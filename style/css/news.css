@@ -19,6 +19,7 @@
 }
 .newsContentRight{
   width: 370px;
+  border-left: 1px dashed #A6A9AC;
 }
 .newsContentLeft p{
   width: 760px;
@@ -61,7 +62,6 @@
 }
 .recommended{
   padding-left: 10px;
-  border-left: 1px dashed #A6A9AC;
 }
 .sameAll{
   width: 50%;

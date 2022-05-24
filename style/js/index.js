@@ -4,12 +4,12 @@ $(document).ready(function () {
   const pairs = query ? query.split("&") : "";
   let entyTitle = "";
   let cateTitle = ""; 
-  $.each(pairs, function (indexInArray, valueOfElement) { 
+  $.each(pairs, function (index, valueOfElement) { 
     if (!pairs) return;
     if (valueOfElement.indexOf("param1") >= 0) {
-      entyTitle = pairs[0]?pairs[0].split('='):"";
+      entyTitle = pairs[index]?pairs[index].split('='):"";
     } else if(valueOfElement.indexOf("param2") >= 0){
-      cateTitle = pairs[1]?pairs[1].split('='):""; 
+      cateTitle = pairs[index]?pairs[index].split('='):""; 
     }
   });
 
@@ -58,7 +58,7 @@ $(document).ready(function () {
   }
   //默认展示第一个抖音去除右侧right
   sum($(".collectShow"), 4);
-  
+
 
   //抖音、快手、虎牙、斗鱼的点击切换事件
   $(".collectionNav span").hover(function () {

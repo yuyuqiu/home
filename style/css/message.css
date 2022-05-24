@@ -111,11 +111,15 @@
 }
 .introduceRight{
   width: 400px;
+  height: 550px;
+  border-left: 1px dashed #A6A9AC;
+}
+.messTop{
+  margin-bottom: 10px;
+  padding: 0;
 }
 .introduceRight .details{
-  height: 490px;
   padding-left: 8px;
-  border-left: 1px dashed #A6A9AC;
 }
 .relevant,.guess{
   width: 1170px;

@@ -58,7 +58,16 @@ $(document).ready(function() {
       // $(this).removeClass("detailListShow");
     }
   );
-  
+  //判断左右盒子的大小
+  function judgeHeight(left, right) {
+    if (left.height() > right.height()) {
+      right.css("height", left.height());
+    } else {
+      right.css("height", right.height());
+    }
+  }
+  judgeHeight($(".detailed"), $(".introduceRight"));
+  judgeHeight($(".newsContentLeft"), $(".newsContentRight"));
   //新闻详情
   $(".newsRecommend li").hover(
     function() {
@@ -83,6 +92,13 @@ $(document).ready(function() {
       // $(this).removeClass("detailListShow");
     }
   );
+  //简介的控制
+  function boxTop(top, bottom) {
+    let height = top.height();
+    bottom.css("top", height + 90);
+  }
+  
+  boxTop($(".messDetail"), $(".messFloat"));
   
   //分页
   //1234...
