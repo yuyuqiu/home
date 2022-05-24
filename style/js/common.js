@@ -68,7 +68,7 @@ $(document).ready(function() {
       $(this).addClass("detailListShow");
 
   });
-  $(".newsRecommend li").hover(
+  $(".newsHot li").hover(
     function() {
       var a = $(this);
       detailLength(a,72);

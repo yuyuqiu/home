@@ -63,7 +63,6 @@
   right: 0;
   width: 370px;
   width: 370px;
-  border: 1px dashed #A6A9AC;
 }
 .messImg img{
   width: 370px;
@@ -102,9 +101,6 @@
   padding: 10px 0;
   text-indent:24px;
 }
-.detailed img{
-  border: 1px dashed #A6A9AC;
-}
 .hotSpan {
   display: inline-block;
   width: 6px;
@@ -141,10 +137,6 @@
 .relevantImg{
   padding-left: 8px;
   border-left: 1px dashed #A6A9AC;
-}
-.relevantImg img,
-.guessBottom img{
-  border: 1px dashed #A6A9AC;
 }
 .guessBottom {
   margin-top: 30px;

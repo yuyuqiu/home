@@ -113,7 +113,7 @@
   display: none;
   margin-top: 4px;
   padding: 5px;
-  border: 1px dashed #a6a9ac;
+  background:#f8f8f8 ;
 }
 .detailListShow .detailList {
   display: flex;
@@ -123,7 +123,7 @@
   color: #5580f7;
 }
 .detailsRight {
-  margin: 20px 9px;
+  margin: 0 9px;
 }
 .detailsize {
   margin-left: 5px;
@@ -185,13 +185,11 @@
 }
 .collectionListTop img {
   border-radius: 10px;
-  border: 1px dashed #a6a9ac;
 }
 .collectImg {
   display: inline-block;
   position: relative;
-  padding: 10px 0;
-  margin-right: 20px;
+  margin:10px 20px 10px 0;
 }
 .collectTop {
   position: absolute;
@@ -201,7 +199,7 @@
   line-height: 56px;
   background-color: rgba(255, 255, 255, 0.6);
   text-align: center;
-  color: #fff;
+  color: #333;
 }
 .gossip {
   margin: 0 auto;
@@ -221,7 +219,6 @@
 .gossipBorder {
   display: inline-block;
   position: relative;
-  border: 1px dashed #a6a9ac;
   /* margin-right: 10px; */
 }
 .gossipDetail {
@@ -234,6 +231,9 @@
   text-align: center;
   color: #fff;
   border-top: 1px dashed #a6a9ac;
+}
+.gossipDetail a{
+  color: #fff;
 }
 .gossiAll {
   width: 377px;

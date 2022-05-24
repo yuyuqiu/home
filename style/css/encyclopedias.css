@@ -30,19 +30,19 @@
   border-radius: 6px;
   background: #CBD9FD;
   cursor: pointer;
-  border: 1px solid #fff;
 }
 .encyStyleRight  .styleActive{
-  border: 1px dashed #5580f7;
+  background: #5580f7;
+  color: #fff;
 }
 .encyStyleRight span:hover{
-  border: 1px dashed #5580f7;
+  background: #5580f7;
+  color: #fff;
 }
 .encyCategory{
   position: relative;
   border-bottom:1px solid #f8f8f8;
-  padding: 16px 0 40px 0;
-  height: 60px;
+  padding: 16px 0 50px 0;
 }
 .encyCategoryRight {
   position: absolute;
@@ -64,12 +64,10 @@
 }
 .encyBottom{
   padding: 40px 0;
-}
-.encyBottom img{
-  border: 1px dashed #a6a9ac;
+  min-width: 400x;
 }
 .encyBottom .collectImg{
-  margin-right:16px;
+  margin-right:18px;
 }
 
 

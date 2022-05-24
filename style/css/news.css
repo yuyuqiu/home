@@ -14,7 +14,11 @@
   margin: 10px 0;
 }
 .newsContentLeft{
+  width: 780px;
   padding-right: 20px;
+}
+.newsContentRight{
+  width: 370px;
 }
 .newsContentLeft p{
   width: 760px;
@@ -46,7 +50,6 @@
 }
 .newsDetail img{
   margin-bottom: 20px;
-  border: 1px dashed #A6A9AC;;
 }
 .hotSpan{
   display: inline-block;

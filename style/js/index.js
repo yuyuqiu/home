@@ -1,4 +1,18 @@
 $(document).ready(function () {
+  const pathname = location.search;
+  const query = pathname.substring(1);
+  const pairs = query ? query.split("&") : "";
+  let entyTitle = "";
+  let cateTitle = ""; 
+  $.each(pairs, function (indexInArray, valueOfElement) { 
+    if (!pairs) return;
+    if (valueOfElement.indexOf("param1") >= 0) {
+      entyTitle = pairs[0]?pairs[0].split('='):"";
+    } else if(valueOfElement.indexOf("param2") >= 0){
+      cateTitle = pairs[1]?pairs[1].split('='):""; 
+    }
+  });
+
   //为了首页样式
   $(".collectionNav span")
     .eq(3)
@@ -10,10 +24,26 @@ $(document).ready(function () {
   //首页默认展示第一条热门新闻
   $(".collectionListTop").eq(0).addClass("collectShow");
 
-  //网红默认点击第一个标签
-  $(".encyStyleRight span").eq(0).addClass("styleActive");
-  $(".encyCategoryRight span").eq(0).addClass("categoryActive");
-
+  //网红标签点击
+  $.each($(".encyStyleRight span"), function () { 
+    if (!pairs) return;
+    var value=$(this).text();
+    if (value == decodeURIComponent(entyTitle[1])) {
+      $(this).addClass("styleActive");
+      $(this).siblings().removeClass("styleActive");
+      return;
+    } 
+    
+  });
+  $.each($(".encyCategoryRight span"), function () { 
+    if (!pairs) return;
+    var value=$(this).text();
+    if (value == decodeURIComponent(cateTitle[1])) {
+      $(this).addClass("categoryActive");
+      $(this).siblings().removeClass("categoryActive");
+      return;
+    } 
+  });
 
   //首页最新收录list判断能否被4整除
   function sum(x,y) {
@@ -47,37 +77,11 @@ $(document).ready(function () {
       sum($(".collectShow"),4);
   });
 
-  // 网红百科标签选择
-  function page() {
-    $(".pageNum span").siblings().removeClass("pageNumActive");
-    $(".pageFirst").siblings().removeClass("pageActive");
-    $(".pageNum span").eq(0).addClass("pageNumActive");
-    $(".pageFirst").addClass("pageActive");
-    $(".pageNext").removeClass("pageNo");
-  }
-  //多选
-  $(".encyStyleRight span").click(function () { 
-    //默认分页
-    page();
-    if ($(this).hasClass("styleActive")) {
-      $(this).removeClass("styleActive");
-    } else {
-      $(this).addClass("styleActive");
-    }
-  })
-  //单选
-  $(".encyCategoryRight span").click(function () {
-    //默认分页
-    page();
-    $(this).addClass("categoryActive");
-    $(this).siblings().removeClass("categoryActive");
-  })
 });
 
 
 //首页轮播图插件
 $(document).ready(function () {
-  console.log(window.location.pathname)
   var swiper = new Swiper(".swiper", {
     autoplay: true, // 可选选项，自动滑动
     loop: true, // 无限轮播

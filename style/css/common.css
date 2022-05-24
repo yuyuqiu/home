@@ -10,7 +10,7 @@
 .logo {
   margin: 28px 0;
   width: 276px;
-  height: 71px;
+  height: 70px;
 }
 .search {
   margin-top: 58px;
@@ -18,10 +18,10 @@
 .search input {
   width: 373px;
   height: 30px;
-  padding-right: 57px;
+  padding:0 57px 0 5px;
   border: 1px solid #a6a9ac;
   border-radius: 5px;
-  font-size: 16px;
+  font-size: 14px;
   font-family: PingFang SC-Regular, PingFang SC;
 }
 .img {
