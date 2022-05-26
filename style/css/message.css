@@ -3,7 +3,7 @@
 .messageDetail{
   width: 100%;
   padding-bottom: 20px;
-  height: 900px;
+  height: 820px;
 }
 .messDetail{
   position: relative;
@@ -55,6 +55,9 @@
   width: 250px;
   padding: 4px 0;
   text-align: left;
+  color: #A6A9AC;
+}
+.followtTable a{
   color: #A6A9AC;
 }
 .messImg{

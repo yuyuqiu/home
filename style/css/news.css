@@ -47,6 +47,7 @@
   font-size: 14px;
 }
 .newsDetail p{
+  font-size: 16px !important;
   margin-bottom: 20px;
 }
 .newsDetail img{

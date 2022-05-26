@@ -230,10 +230,6 @@
   background-color: rgba(255, 255, 255, 0.6);
   text-align: center;
   color: #fff;
-  border-top: 1px dashed #a6a9ac;
-}
-.gossipDetail a{
-  color: #fff;
 }
 .gossiAll {
   width: 377px;
