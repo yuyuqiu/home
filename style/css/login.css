@@ -51,3 +51,8 @@ html,body{
 .form-signin  button{
   font-size: 16px;
 }
+.textLogin{
+  width: 100px;
+  height: 48px;
+  border: 1px solid #ccc;
+}
