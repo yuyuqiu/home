@@ -11,9 +11,18 @@
 .dataList img {
   margin-bottom: 0;
 }
+.detailDiv{
+  margin: 0 20px 20px 0;
+  width: 220px;
+  height: 150px;
+}
+.detailDivRight{
+  width: 220px;
+  height: 150px;
+}
 
 .listSection{
-  padding: 8px 0;
+  padding: 8px 0; 
   font-size: 14px;
   color: #A6A9AC;
 }

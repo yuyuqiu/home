@@ -95,7 +95,7 @@ $(document).ready(function() {
   //简介的控制
   function boxTop(top, bottom) {
     let height = top.height();
-    bottom.css("top", height + 90);
+    bottom.css("top", height + 140);
   }
   
   boxTop($(".messDetail"), $(".messFloat"));
