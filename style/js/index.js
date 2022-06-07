@@ -13,6 +13,12 @@ $(document).ready(function () {
     }
   });
 
+  //判断屏幕低于1000px的时候,自动跳转到手机端
+  if (window.innerWidth < 1000) {
+    return window.location.href = "http://www.yiqianwanghong.com/mobile_index";
+  } 
+
+
   //为了首页样式
   $(".collectionNav span")
     .eq(3)
